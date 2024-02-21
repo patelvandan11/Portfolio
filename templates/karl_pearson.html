@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karl Pearson's Coefficient Calculator</title>
+    <style>
+
+        h1{
+            color: red;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+            font-family: 'Roboto';
+        
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: animate 2s infinite;
+        }
+        form{
+            text-align: center;
+            margin: 50px  25px 25px 25px;
+            font-family: 'ariyal', sans-serif;
+            
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            
+            animation: animate 2s infinite;
+        }
+        div{
+            border:2px;
+            border-color: black;
+            border-style: solid;
+            margin: center;
+        }
+        .lable{
+            font-size: 20px;
+            font-family: 'ariyal', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: animate 2s infinite;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Karl Pearson's Coefficient Calculator</h1>
+    <div>
+    <form id="calculationForm" action="/karl_pearson_out" method="post">
+        <label class="lable" for="n">Enter n :</label>
+        <input type="text" name="n" required>
+        <br>
+        <label class="lable"  for="x">Enter x :</label>
+        <input type="text" name="x" required>
+        <br>
+        <label class="lable"  for="y">Enter y :</label>
+        <input type="text" name="y" required>
+        <br>
+        <br>
+       
+        <button type="submit">Calculate</button>
+        <u1></u1>
+        <button type="submit">Methodology</button>
+    </form>
+</div>
+</body>
+</html>

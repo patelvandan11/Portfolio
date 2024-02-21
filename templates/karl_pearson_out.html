@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Result</title>
+        <style>
+            *{
+                background-color:  #e6f7ff;
+
+            }
+            body {
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                color: #333;
+            }
+            p {
+                color: #666;
+            }
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .result-container {
+                max-width: 466px;
+                background-color: #b3e7ff;
+                padding: 51px;
+                border-radius: 27px;
+            }
+            a {
+                color: #00f;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <div class="result-container">
+                <h1 style="background-color: #b3e7ff">Result</h1>
+                <p style="background-color: #b3e7ff">The Karl Pearson correlation coefficient is: {{ result }}</p>
+                <a href="/" style="background-color: #b3e7ff","     ">Back to input form</a>
+            </div>
+        </div>
+    </body>
+    </html>
