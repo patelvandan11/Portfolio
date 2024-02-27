@@ -1,10 +1,10 @@
 # app.py
 from flask import Flask, render_template, request 
 # from flask_pymongo import PyMongo
-from flask_pymongo import PyMongo
+# from flask_pymongo import PyMongo
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
-mongo = PyMongo(app)
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
+# mongo = PyMongo(app)
  
 @app.route('/')
 def index():
@@ -16,14 +16,14 @@ def projects():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
-        # Inserting data into MongoDB
-        contact_data = {'name': name, 'email': email, 'message': message}
-        mongo.db.collection.insert_one(contact_data)
-        return render_template('contact.html')
+    # if request.method == 'POST':
+    #     name = request.form['name']
+    #     email = request.form['email']
+    #     message = request.form['message']
+    #     # Inserting data into MongoDB
+    #     contact_data = {'name': name, 'email': email, 'message': message}
+    #     mongo.db.collection.insert_one(contact_data)
+    #     return render_template('contact.html')
     return render_template('contact.html')
 
 @app.route('/about', methods=['GET', 'POST'])
