@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <title>Vandan</title>
 
     <script>
@@ -126,13 +126,15 @@
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
-                                        <a href="http://127.0.0.1:5502/spurgeon-1.0.0/single-standard.html">
+                                        <a href="{{url_for('about')}}">
                                             I am Vandan Patel
                                         </a>
                                     </h2>
-                                    <p class="hero__entry-desc">
-                                        I Am Pursuing B.Tech In Artificial Intelligence And Data Science. From A.D Patel Institute Of Technology , CVM University.
-                                    </p>
+                                    {% block hero_entry_desc %}
+                                        <p class="hero__entry-desc">
+                                            I Am Pursuing B.Tech In Artificial Intelligence And Data Science. From A.D Patel Institute Of Technology , CVM University.
+                                        </p>
+                                    {% endblock %}
                                     <a class="hero__more-link" href="{{url_for('about')}}">Read More</a>
                                 </div>
                             </div>
@@ -169,7 +171,7 @@
         
                             <div class="entry__thumb">
                                 <a href="http://127.0.0.1:5502/spurgeon-1.0.0/single-standard.html" class="thumb-link">
-                                    <img src=".static/images/statue-600.jpg" srcset="./static/images/thumbs/masonry/statue-600.jpg 1x, images/thumbs/masonry/statue-1200.jpg 2x" alt="">
+                                    <img src="./static/images/thumbs/masonry/statue-600.jpg" srcset="./static/images/thumbs/masonry/statue-600.jpg 1x, images/thumbs/masonry/statue-1200.jpg 2x" alt="">
                                 </a>
                             </div> <!-- end entry__thumb -->
 
@@ -183,7 +185,7 @@
                                           
                                         </span>
                                     </div>
-                                    <h1 class="entry__title"><a href="http://127.0.0.1:5502/spurgeon-1.0.0/single-standard.html">Calculation of Karl Pearson's Coefficient of Correlation from Scratch.</a></h1>
+                                    <h1 class="entry__title"><a>Calculation of Karl Pearson's Coefficient of Correlation from Scratch.</a></h1>
                                  </div>
                                 <div class="entry__excerpt">
                                     <p>
@@ -381,6 +383,7 @@
 
 <!-- Code injected by live-server -->
 <script>
+    
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
 		(function () {
@@ -416,6 +419,9 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
+
 </script>
 
-</div></body></html>
+</div>
+</body>
+</html>
