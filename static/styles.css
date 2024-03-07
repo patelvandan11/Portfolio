@@ -2969,8 +2969,8 @@
      background : rgba(0, 0, 0, 0.5);
      opacity    : 0;
      visibility : hidden;
-     width      : 100%;
-     height     : 100%;
+     /* max-width  : 100%; */
+     /* max-height : 100%; */
      transition : all 0.3s ease-in-out;
      position   : absolute;
      top        : 0;
@@ -2987,8 +2987,8 @@
      width          : 90px;
      letter-spacing : .2rem;
      line-height    : 90px;
-     margin-left    : -45px;
-     margin-top     : -55px;
+     margin-left    : 100vw;
+     margin-top     : 100vw;
      text-align     : center;
      color          : white;
      opacity        : 0;
@@ -2996,8 +2996,8 @@
      transform      : scale(0.5);
      transition     : all 0.3s ease-in-out;
      position       : absolute;
-     left           : 50%;
-     top            : 50%;
+     left           : 50vw;
+     top            : 50vw;
  }
  
  .bricks-wrapper .entry__thumb:hover .thumb-link::before {
@@ -3918,11 +3918,11 @@
      content          : "";
      display          : block;
      background-color : black;
-     width            : 50%;
-     height           : 100%;
+     width            : auto;
+     height           : auto;
      position         : absolute;
      top              : 0;
-     right            : 50%;
+     right            : auto;
      bottom           : 0;
      left             : 0;
  }
@@ -3931,12 +3931,13 @@
      background-size     : cover;
      background-position : center;
      background-repeat   : no-repeat;
-     width               : 50%;
+     width               : auto;
+     background-color: white;
      position            : absolute;
      top                 : 0;
      right               : 50%;
      bottom              : 0;
-     left                : 0;
+     left                : 0; 
  }
  
  .hero__entry-image::before {
