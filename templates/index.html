@@ -15,8 +15,9 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='VAN.css') }}">
     <!-- favicons
     ================================================== -->
     
@@ -25,16 +26,17 @@
 </head>
 
 
-<body id="top">
+<body id="top" >
 
 
     <!-- preloader
     ================================================== -->
     <div id="preloader" >
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div id="loader" class="dots-fade" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
         </div>
     </div>
 
@@ -62,12 +64,7 @@
     
                     <ul class="s-header__nav">
                         <li class="current-menu-item"><a href="{{url_for('index')}}" title="">Home</a></li>
-                        <li><a href="{{ url_for('projects') }}" title="">projects</a>
-                            
-                        </li>
-                        
-                       
-                    
+                        <li><a href="{{ url_for('projects') }}" title="">projects</a></li>
                         <li><a href="{{ url_for('about')}}" title="">About</a></li>
                         <li><a href="{{ url_for('contact')}}" title="">Contact</a></li>
                     </ul> <!-- end s-header__nav -->
@@ -89,15 +86,30 @@
                             <input type="submit" class="s-header__search-submit" value="Search"> 
                         </form>
     
-                        <a href="##0" title="Close Search" class="s-header__search-close">Close</a>
+                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
     
                     </div> <!-- end row -->
                 </div> <!-- s-header__search-inner -->
     
             </div> <!-- end s-header__search -->
 
-            <a class="s-header__menu-toggle" href="##0"><span>Menu</span></a>
-            <a class="s-header__search-trigger" href="##">
+            <a class="s-header__menu-toggle" href="#0" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+              
+              <div class="menu" id="menu">
+                <!-- Your menu items go here -->
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+              
+            <a class="s-header__search-trigger" href="#">
                 <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"></path>
                 </svg>
@@ -119,7 +131,7 @@
                     <div class="swiper-wrapper" id="swiper-wrapper-b506e52295210596f" aria-live="polite" >
                         <article class="hero__slide swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" >
                             <div class="hero__entry-image"  alt="Nature" class="responsive"
-                                style="background-image: url('static/images/featured-01_2000.jpg');"> </div>
+                                style="background-image: url('static/images/van.jpg');"> </div>
                             <div class="hero__entry-text">
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
@@ -149,13 +161,13 @@
     
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> <!-- end hero slider -->
 
-                <a href="hindex.html#bricks" class="hero__scroll-down smoothscroll">
+              <!--  <a href="hindex.html#bricks" class="hero__scroll-down smoothscroll">
                     <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
                     </svg>
                     <span>Scroll</span>
-                </a>
+                </a>   -->
 
             </div> <!-- end hero -->
 
@@ -169,74 +181,75 @@
 
                         <div class="grid-sizer"></div>
                         <!-- ******************************************************************************** -->
-                        <article class="brick entry" data-animate-el=" ">
+                        <article class="brick entry">
         
                             <div class="entry__thumb">
-                                <a href="#" class="thumb-link">
-                                    <img src="./static/images/karl1.jpg" srcset="./static/images/karl1.jpg 1x, .static/images/karl2.jpg 2x" alt="">
+                                <a href="single-standard.html" class="thumb-link">
+                                    <img src="./static/images/karl1.jpg" 
+                                        srcset="./static/images/karl1.jpg 1x, ./static/images/karl2.jpg 2x" >
                                 </a>
                             </div> <!-- end entry__thumb -->
-
+        
                             <div class="entry__text">
                                 <div class="entry__header">
                                     <div class="entry__meta">
                                         <span class="cat-links">
-                                            <a href="#">Project</a>
+                                            <a href="{{ url_for('karl_pearson') }}">Project</a>
                                         </span>
-                                        <span class="byline">
-                                          
+                                        <span class="post-date">
+                                        
+                                            <a href="{{ url_for('karl_pearson') }}"></a>
                                         </span>
                                     </div>
-                                    <h1 class="entry__title"><a>Calculation of Karl Pearson's Coefficient of Correlation from Scratch.</a></h1>
-                                 </div>
+                                    <h1 class="entry__title"><a href="{{ url_for('karl_pearson') }}">Calculation of Karl Pearson's Coefficient of Correlation from Scratch.</a></h1>
+                                </div>
                                 <div class="entry__excerpt">
                                     <p>
                                         calculating Karl Pearson's Coefficient of Correlation from scratch. Understanding the step-by-step process enhances comprehension of the statistical concepts involved in measuring the strength and direction of linear relationships between variables.
                                     </p>
                                 </div>
-                                <a class="entry__more-link" href="{{ url_for('karl_pearson') }}"> Read More</a>
-                            </div> <!-- end entry__text -->
+                                <a class="entry__more-link" href="{{ url_for('karl_pearson') }}">Read More</a>
+                            </div>
+                             <!-- end entry__text -->
                         
-
-
-                        </article> 
-                        <!-- end article -->
-
-<!-- /----------------------------------------------------------------------------------------------------- -->
-
-<!-- ----------------------------------------------------------------------------------------------------- -->
-<article class="brick entry" data-animate-el="" >
-    <div class="entry__thumb">
-        <a href="https://github.com/patelvandan11/Housing-Price-Prediction.git" class="thumb-link">
-            <img src=".static/images/beetle-600.jpg" srcset="./static/images/thumbs/masonry/beetle-600.jpg 1x, images/thumbs/masonry/beetle-1200.jpg 2x" alt="">
-        </a>
+                        </article>
+                        
+                            
+                        <article class="brick entry">
         
-    </div> <!-- end entry__thumb -->
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="thumb-link">
+                                    <img src="./static/images/h-600.jpg" 
+                                        srcset="./static/images/h-600.jpg 1x, ./static/images/h-1200.jpg 2x" >
+                                </a>
+                            </div> <!-- end entry__thumb -->
+        
+                            <div class="entry__text">
+                                <div class="entry__header">
+                                    <div class="entry__meta">
+                                        <span class="cat-links">
+                                            <a href="https://github.com/patelvandan11/Housing-Price-Prediction.git">Project</a>
+                                        </span>
+                                        <span class="post-date">
+                                        
+                                            <a href="https://github.com/patelvandan11/Housing-Price-Prediction.git"></a>
+                                        </span>
+                                    </div>
+                                    <h1 class="entry__title"><a href="https://github.com/patelvandan11/Housing-Price-Prediction.git">House Price Prediction.</a></h1>
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                        implemented house price prediction model can be a valuable tool for real estate
+                                        professionals, investors, and anyone interested in buying or selling a property.
+                                    </p>
+                                </div>
+                                <a class="entry__more-link" href="https://github.com/patelvandan11/Housing-Price-Prediction.git">Read More</a>
+                            </div>
+                             <!-- end entry__text -->
+                        
+                        </article> <!-- end article -->
 
-    <div class="entry__text">
-        <div class="entry__header">
-            <div class="entry__meta">
-                <span class="cat-links">
-                    <a href="https://github.com/patelvandan11/Housing-Price-Prediction.git">Project</a>
-                </span>
-                <span class="bayline">
 
-                    <a href="https://github.com/patelvandan11/Housing-Price-Prediction.git"></a>
-                </span>
-            </div>
-            <h1 class="entry__title"><a href="https://github.com/patelvandan11/Housing-Price-Prediction.git">House Price Prediction.</a>
-            </h1>
-        </div>
-        <div class="entry__excerpt">
-            <p>
-                implemented house price prediction model can be a valuable tool for real estate
-                professionals, investors, and anyone interested in buying or selling a property.
-            </p>
-        </div>
-        <a class="entry__more-link" href="https://github.com/patelvandan11/Housing-Price-Prediction.git">Read More</a>
-    </div> <!-- end entry__text -->
-
-</article> <!-- end article -->
 
                 
                 <!-- end pagination -->
@@ -366,14 +379,14 @@
 
             </div> <!-- end s-footer__bottom -->
            
-            <div class="ss-go-top link-is-visible">
+            <!-- <div class="ss-go-top link-is-visible">
                 <a class="smoothscroll" title="Back to Top" href="##top">
                     <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 10.25L12 4.75L6.75 10.25"></path>
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19.25V5.75"></path>
                     </svg>
                 </a>
-            </div> <!-- end ss-go-top -->
+            </div> --> <!-- end ss-go-top -->
 
         </footer><!-- end s-footer -->
 
@@ -421,6 +434,11 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
+
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+      }
 
 </script>
 

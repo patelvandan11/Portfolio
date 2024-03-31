@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005599;
+}
+
+.menu {
+    margin: 20px 0;
+}
+
+.menu a {
+    margin-right: 15px;
+}
+
+.subscribe {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.site-links {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.site-links a {
+    display: block;
+    margin-bottom: 10px;
+}
