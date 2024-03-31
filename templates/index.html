@@ -16,8 +16,10 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor.css') }}"> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='VAN.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='s.css') }}">
+     
     <!-- favicons
     ================================================== -->
     
@@ -41,135 +43,46 @@
     </div>
 
 
+
     <!-- page wrap
     ================================================== -->
     <div id="page" class="s-pagewrap ss-home">
 
-
-        <!-- # site header 
+        <!-- navbar  
         ================================================== -->
-        <header id="masthead" class="s-header">
-
-            <div class="s-header__branding">
-                <p class="site-title">
-                    <a href="{{url_for('index')}}" rel="home" link="#">Patel Vandan.</a>
-                </p>
+        <nav class="nb" id="bg">
+            <ul class="nm">
+                <li><a href="{{url_for("index")}}"><span>Home</span></a></li>
+                <li><a href="{{url_for("projects")}}"><span>Projects</span></a></li>
+                <li><a href="{{url_for("about")}}"><span>About </span></a></li>
+                <li><a href="{{url_for("contact")}}"><span>contact</span></a></li>
+               
+              </ul>
+        </nav>
+        <div class="pin">
+            <img src="./static/images/van.jpg" 
+             style="
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             margin-top: auto;
+             margin-bottom: auto;
+             width: 80%;
+             animation: move 2s infinite;">
+             
             </div>
-
-            <div class="row s-header__navigation">
-
-                <nav class="s-header__nav-wrap">
-    
-                    <h3 class="s-header__nav-heading">Navigate to</h3>
-    
-                    <ul class="s-header__nav">
-                        <li class="current-menu-item"><a href="{{url_for('index')}}" title="">Home</a></li>
-                        <li><a href="{{ url_for('projects') }}" title="">projects</a></li>
-                        <li><a href="{{ url_for('about')}}" title="">About</a></li>
-                        <li><a href="{{ url_for('contact')}}" title="">Contact</a></li>
-                    </ul> <!-- end s-header__nav -->
-
-                </nav> <!-- end s-header__nav-wrap -->
-    
-            </div> <!-- end s-header__navigation -->
-
-            <div class="s-header__search">
-
-                <div class="s-header__search-inner">
-                    <div class="row">
-    
-                        <form role="search" method="get" class="s-header__search-form" action="##">
-                            <label>
-                                <span class="u-screen-reader-text">Search for:</span>
-                                <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
-                            </label>
-                            <input type="submit" class="s-header__search-submit" value="Search"> 
-                        </form>
-    
-                        <a href="#0" title="Close Search" class="s-header__search-close">Close</a>
-    
-                    </div> <!-- end row -->
-                </div> <!-- s-header__search-inner -->
-    
-            </div> <!-- end s-header__search -->
-
-            <a class="s-header__menu-toggle" href="#0" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
-              
-              <div class="menu" id="menu">
-                <!-- Your menu items go here -->
-                <ul>
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#projects">Projects</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-              </div>
-              
-            <a class="s-header__search-trigger" href="#">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"></path>
-                </svg>
-            </a>
-
-        </header> <!-- end s-header -->
-
+            <p class="hero__entry-desc">
+                I am Vandan Patel
+                I Am Pursuing B.Tech In Artificial Intelligence And Data Science. From A.D Patel Institute Of Technology , CVM University.
+            </p>
+     
+            
+            
+        </div>
 
         <!-- # site-content
         ================================================== -->
         <section id="content" class="s-content">
-
-
-            <!-- hero -->
-            <div class="hero">
-
-                <div class="hero__slider swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal">
-
-                    <div class="swiper-wrapper" id="swiper-wrapper-b506e52295210596f" aria-live="polite" >
-                        <article class="hero__slide swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" >
-                            <div class="hero__entry-image"  alt="Nature" class="responsive"
-                                style="background-image: url('static/images/van.jpg');"> </div>
-                            <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
-                                    <div class="hero__entry-meta">
-                                        <span class="cat-links">
-                                            <a href="category.html">MY SELF</a>
-                                        </span>
-                                    </div>
-                                    <h2 class="hero__entry-title">
-                                        <a href="{{url_for('about')}}">
-                                            I am Vandan Patel
-                                        </a>
-                                    </h2>
-                                    {% block hero_entry_desc %}
-                                        <p class="hero__entry-desc">
-                                            I Am Pursuing B.Tech In Artificial Intelligence And Data Science. From A.D Patel Institute Of Technology , CVM University.
-                                        </p>
-                                    {% endblock %}
-                                    <a class="hero__more-link" href="{{url_for('about')}}">Read More</a>
-                                </div>
-                            </div>
-                        </article>
-                        
-                        
-                    </div> <!-- swiper-wrapper -->
-
-                    
-    
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> <!-- end hero slider -->
-
-              <!--  <a href="hindex.html#bricks" class="hero__scroll-down smoothscroll">
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
-                    </svg>
-                    <span>Scroll</span>
-                </a>   -->
-
-            </div> <!-- end hero -->
 
 
             <!--  masonry -->
@@ -285,31 +198,11 @@
 
             <div class="row s-footer__main">
 
-                <!-- <div class="column lg-5 md-6 tab-12 s-footer__about">
-                    <h4>Spurgeon</h4>
-
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo 
-                    </p>
-                </div> end s-footer__about -->
+                
 
                 <div class="column lg-5 md-6 tab-12">
                     <div class="row">
-                        <!-- <div class="column lg-6">
-                            <h4>Blog</h4>
-                            <ul class="link-list">
-                                <li><a href="category.html">Lifestyle</a></li>
-                                <li><a href="category.html">Workplace</a></li>
-                                <li><a href="category.html">Inspiration</a></li>
-                                <li><a href="category.html">Design</a></li>
-                                <li><a href="category.html">Health</a></li>
-                                <li><a href="category.html">Photography</a></li>
-                            </ul>
-                        </div> -->
+                         
                         <div class="column lg-6">
                             <h4>Site Links</h4>
                             <ul class="link-list">
@@ -370,23 +263,10 @@
                         </li> 
                     </ul>
                 </div>
-                <!-- <div class="column lg-5 md-6 tab-12">
-                    <div class="ss-copyright">
-                        <span>© Copyright Spurgeon 2021</span> 
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution <a href="https://themewagon.com">ThemeWagon</a></span>
-                    </div>
-                </div> -->
-
+              
             </div> <!-- end s-footer__bottom -->
            
-            <!-- <div class="ss-go-top link-is-visible">
-                <a class="smoothscroll" title="Back to Top" href="##top">
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 10.25L12 4.75L6.75 10.25"></path>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19.25V5.75"></path>
-                    </svg>
-                </a>
-            </div> --> <!-- end ss-go-top -->
+            
 
         </footer><!-- end s-footer -->
 
@@ -441,7 +321,14 @@
       }
 
 </script>
-
+<script> function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }</script>
 </div>
 </body>
 </html>

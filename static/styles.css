@@ -2914,7 +2914,7 @@
   * ------------------------------------------------------------------- */
  .bricks {
      --brick-padding : 4rem;
-     padding-top     : var(--vspace-5);
+     padding-top     : 20px;
      padding-bottom  : var(--vspace-3);
  }
  
@@ -3199,7 +3199,7 @@
  .s-pagewrap {
      display        : flex;
      flex-direction : column;
-     min-height     : 100%;
+     min-height     : 50%;
      overflow       : hidden;
      position       : relative;
  }
@@ -4029,8 +4029,7 @@
  
  .hero__entry-desc {
      max-width    : 540px;
-     margin-right : auto;
-     margin-left  : auto;
+     margin: auto;
  }
  
  .hero__more-link {
@@ -4229,7 +4228,9 @@
      }
  
      .hero__entry-desc {
-         max-width : 380px;
+         max-width : 100%;
+         padding-left: 60px;
+         padding-right: 60px;
      }
  }
  
@@ -4286,7 +4287,7 @@
      }
  
      .hero__entry-text {
-         margin : 0 7rem;
+         margin : -215px 0rem;
      }
  
      .hero__entry-text-inner {
@@ -4388,7 +4389,7 @@
   *
   * ------------------------------------------------------------------- */
  .s-content {
-     padding-top : var(--vspace-5);
+     padding-top : 0px;
  }
  
  .s-content--blog,
