@@ -1,0 +1,134 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 0;
+    background-color: green;
+    animation: growStem 3s forwards;
+}
+
+.leaves {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    animation: growLeaves 3s 1s forwards;
+}
+
+.leaf {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.leaf1 {
+    transform: rotate(-45deg) translate(-35px, -10px);
+}
+
+.leaf2 {
+    transform: rotate(45deg) translate(35px, -10px);
+}
+
+.flower {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: bloom 3s 3s forwards;
+}
+
+.flower1 {
+    bottom: 300px;
+}
+
+.flower2 {
+    bottom: 250px;
+}
+
+.petal {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50% 50% 0 0;
+}
+
+.petal1 { transform: rotate(0deg) translateX(-25px); }
+.petal2 { transform: rotate(72deg) translateX(-25px); }
+.petal3 { transform: rotate(144deg) translateX(-25px); }
+.petal4 { transform: rotate(216deg) translateX(-25px); }
+.petal5 { transform: rotate(288deg) translateX(-25px); }
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes growStem {
+    to {
+        height: 300px;
+    }
+}
+
+@keyframes growLeaves {
+    to {
+        width: 100px;
+        height: 20px;
+    }
+}
+
+@keyframes bloom {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100px;
+        height: 200px;
+    }
+    .stem {
+        width: 5px;
+    }
+    .leaves .leaf {
+        width: 25px;
+        height: 10px;
+    }
+    .flower .petal {
+        width: 25px;
+        height: 50px;
+    }
+    .center {
+        width: 15px;
+        height: 15px;
+    }
+}

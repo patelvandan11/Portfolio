@@ -1,0 +1,182 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set basic font styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Main section styles */
+main {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+}
+
+/*  */
+
+.vandan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 span {
+    color: #ff0000; /* Adjust this to change the color of "cutting-edge" */
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px; /* Adjust this value to increase the image size */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+/* Content section styles */
+#content {
+    padding: 20px;
+}
+
+.entry {
+    margin-bottom: 40px;
+}
+
+.entry__thumb img {
+    width: 100%;
+    height: auto;
+}
+
+.entry__text {
+    margin-top: 20px;
+}
+
+.entry__header {
+    margin-bottom: 10px;
+}
+
+.entry__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.entry__excerpt {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.entry__more-link {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.entry__more-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.s-footer__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-list {
+    list-style: none;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+}
+
+.link-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.s-footer__social {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.s-footer__social li {
+    margin-left: 10px;
+}
+
+.s-footer__social li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.s-footer__social li a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    .vandan {
+        flex-direction: column;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}

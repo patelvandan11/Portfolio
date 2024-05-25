@@ -16,6 +16,7 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='pro.css') }}"> 
     <link rel="stylesheet" href="{{ url_for('static', filename='s.css') }}"> 
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor.css') }}"> 
     <!-- favicons
@@ -47,15 +48,18 @@
     <div id="page" class="s-pagewrap ss-home">
 
 
-        <nav class="nb" id="bg">
-            <ul class="nm">
+        <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
                 <li><a href="{{url_for("index")}}"><span>Home</span></a></li>
                 <li><a href="{{url_for("projects")}}"><span>Projects</span></a></li>
-                <li><a href="{{url_for("about")}}"><span>About </span></a></li>
-                <li><a href="{{url_for("contact")}}"><span>contact</span></a></li>
-               
-              </ul>
+                <li><a href="{{url_for("about")}}"><span>About</span></a></li>
+                <li><a href="{{url_for("contact")}}"><span>Contact</span></a></li>
+                
+            </ul>
         </nav>
+    </header>
         
         <div class="pin">
             <img src="./static/images/vandan.jpg" 
