@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chat with File Attachment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box">
+            <div class="messages"></div>
+            <div class="input-container">
+                <input type="text" id="chat-input" placeholder="Type your message here...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+        <div class="file-attachment">
+            <input type="file" id="file-input" multiple>
+            <label for="file-input" id="file-label">Drop files here or click to upload</label>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('file-label').addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.target.style.background = '#e0f7ff';
+        });
+        
+        document.getElementById('file-label').addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.target.style.background = '#ffffff';
+        });
+        
+        document.getElementById('file-label').addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.target.style.background = '#ffffff';
+        
+            let files = e.dataTransfer.files;
+            for (let file of files) {
+                console.log('File(s) dropped: ', file.name);
+            }
+        });
+        
+        document.getElementById('file-input').addEventListener('change', (e) => {
+            let files = e.target.files;
+            for (let file of files) {
+                console.log('File(s) selected: ', file.name);
+            }
+        });
+        
+    </script>
+</body>
+</html>

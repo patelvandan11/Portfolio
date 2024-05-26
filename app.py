@@ -13,6 +13,9 @@ def index():
 @app.route('/projects', methods=['GET', 'POST'])
 def projects():
     return render_template('projects.html')
+@app.route('/chat', methods=['GET', 'POST'])
+def chat():
+    return render_template('chat.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
