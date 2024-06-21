@@ -13,6 +13,7 @@ def index():
 @app.route('/projects', methods=['GET', 'POST'])
 def projects():
     return render_template('projects.html')
+
 @app.route('/chat', methods=['GET', 'POST'])
 def chat():
     return render_template('chat.html')
@@ -33,12 +34,17 @@ def contact():
 @app.route('/about', methods=['GET', 'POST'])
 def about():
     return render_template('about.html')
+
 @app.route('/paintings', methods=['GET', 'POST'])
 def paintings():
     return render_template('paintings.html')
+
 @app.route('/karl_pearson', methods=['GET', 'POST'])
 def karl_pearson():
     return render_template('karl_pearson.html')
+@app.route('/photos', methods=['GET', 'POST'])
+def photos():
+    return render_template('photos.html')
 
 @app.route('/karl_pearson_out', methods=['POST'])
 def karl_pearson_out():
