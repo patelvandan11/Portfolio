@@ -42,9 +42,6 @@ def paintings():
 @app.route('/karl_pearson', methods=['GET', 'POST'])
 def karl_pearson():
     return render_template('karl_pearson.html')
-@app.route('/photos', methods=['GET', 'POST'])
-def photos():
-    return render_template('photos.html')
 
 @app.route('/karl_pearson_out', methods=['POST'])
 def karl_pearson_out():
