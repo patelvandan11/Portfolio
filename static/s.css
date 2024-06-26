@@ -30,3 +30,34 @@
 .nm li a:hover {
     color: #ffa500; /* Text color of links on hover */
 }
+
+
+
+
+/*     ---------------------------------------------------------------------------------------            */
+
+
+.pin {
+    text-align: center;
+}
+.pin img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    animation: move 2s infinite;
+}
+p {
+    display: block;
+    margin: auto;
+    width: 50%;
+    animation: move 2s infinite;
+    text-align: center;
+}
+@keyframes move {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
+
+
+/* ---------------------------3 line ---------------- */
