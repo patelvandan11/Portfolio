@@ -3199,7 +3199,7 @@
  .s-pagewrap {
      display        : flex;
      flex-direction : column;
-     min-height     : 50%;
+     
      overflow       : hidden;
      position       : relative;
  }
