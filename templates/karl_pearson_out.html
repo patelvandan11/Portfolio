@@ -1,51 +1,56 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Result</title>
-        <style>
-            *{
-                background-color:  #e6f7ff;
-
-            }
-            body {
-                font-family: Arial, sans-serif;
-            }
-            h1 {
-                color: #333;
-            }
-            p {
-                color: #666;
-            }
-            .center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-            .result-container {
-                max-width: 466px;
-                background-color: #b3e7ff;
-                padding: 51px;
-                border-radius: 27px;
-            }
-            a {
-                color: #00f;
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="center">
-            <div class="result-container">
-                <h1 style="background-color: #b3e7ff">Result</h1>
-                <p style="background-color: #b3e7ff">The Karl Pearson correlation coefficient is: {{ result }}</p>
-                <a href="/" style="background-color: #b3e7ff","     ">Back to input form</a>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url("./static/images/karl1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: ;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-container {
+            max-width: 466px;
+            background-color: rgba(253,253,253,0.75);
+            padding: 51px;
+            border-radius: 27px;
+            text-align: center;
+            
+        }
+        a {
+            color: #00f;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="result-container">
+            <h1>Result</h1>
+            <p style="font-size:25px;">The Karl Pearson correlation coefficient is: {{ result }}</p>
+            <a href="/karl_pearson">Back to input form</a>
         </div>
-    </body>
-    </html>
+    </div>
+</body>
+</html>
