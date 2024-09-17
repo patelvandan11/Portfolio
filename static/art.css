@@ -65,78 +65,8 @@
   margin: 50px auto;
 }
 
-/* Pins */
-.pin {
-  display: inline-block;
-  background: #FEFEFE;
-  border: 2px solid #FAFAFA;
-  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-  margin: 0px 10px 15px 0px;
-  padding: 15px;
-  width: calc(20% - 20px); /* Adjusted width for one-by-one row format */
-}
 
-.pin img {
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-  margin-bottom: 5px;
-}
-
-.pin p {
-  font: 12px/18px Arial, sans-serif;
-  color: #333;
-  margin: 0;
-} 
-
-.pin:hover {
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-
-
-
-
-
-/* skillll      css  */
-
-
-.skills .container {
-  flex-direction: column;
-}
-
-/*---------skill--------*/
-/*---------portfolio--------*/
-.portfolio .content {
-  flex-direction: column;
-}
-
-.portfolio .filter-menu {
-  margin-top: 30px;
-}
-
-/*---------portfolio--------*/
-/*---------experience--------*/
-.experience .content {
-  flex-direction: column;
-}
-
-.experience .left img {
-  width: 100%;
-}
-
-.experience .left, .right {
-  width: 100%;
-}
-
-/*---------experience--------*/
-/*---------Testimonials--------*/
-.Testimonials .container {
-  flex-direction: column;
-}
-
-/*---------Testimonials--------*/
+ 
 /*---------contact--------*/
 .contact .container {
   flex-direction: column;
@@ -156,10 +86,7 @@ footer .content,
 .social_media .content {
   grid-template-columns: repeat(3, 1fr);
 }
-
-/*---------social_media--------*/
-}
-
+ 
 @media only screen and (max-width:511px) {
 .heading h2 {
   font-size: 30px;
