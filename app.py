@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 # from flask_pymongo import PyMongo
 # from flask_pymongo import PyMongo
 app = Flask(__name__)
+
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
 # mongo = PyMongo(app)
 @app.route('/')
@@ -12,6 +13,9 @@ def index():
 @app.route('/projects', methods=['GET', 'POST'])
 def projects():
     return render_template('projects.html')
+# @app.route('/photos', methods=['GET', 'POST'])
+# def photos():
+#     return render_template('photos.html')
 
 @app.route('/chat', methods=['GET', 'POST'])
 def chat():
